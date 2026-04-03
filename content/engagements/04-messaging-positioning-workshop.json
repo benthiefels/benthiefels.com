@@ -1,0 +1,12 @@
+{
+  "order": 4,
+  "icon": "\ud83c\udfaf",
+  "iconColor": "orange",
+  "name": "Messaging & positioning workshop",
+  "whatItIs": "A three-week sprint to get clear on how you should be talking about your product.",
+  "howItWorks": "We review how you show up today, then I lay out realistic positioning options with tradeoffs. Once you pick a direction, I deliver an internal alignment deck and a new homepage that puts the story in language customers understand.",
+  "bestFor": "When you have product-market fit but your story hasn't kept up with the product.",
+  "costLabel": "One-time project",
+  "costValue": "$14,000",
+  "costNote": ""
+}

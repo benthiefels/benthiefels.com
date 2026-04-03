@@ -1,0 +1,12 @@
+{
+  "order": 3,
+  "icon": "\ud83d\udcda",
+  "iconColor": "blue",
+  "name": "Mentoring",
+  "whatItIs": "Embedded support focused on developing your PMM team.",
+  "howItWorks": "I act as an execution partner and sounding board. We work on real projects together while building better habits around positioning, launches, and enablement.",
+  "bestFor": "Junior or mid-level PMMs who don't have a senior leader to learn from.",
+  "costLabel": "Average",
+  "costValue": "$6,000 \u2013 $15,000/month",
+  "costNote": "(3 month contract required)"
+}

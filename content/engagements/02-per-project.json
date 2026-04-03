@@ -1,0 +1,12 @@
+{
+  "order": 2,
+  "icon": "\u26a1",
+  "iconColor": "orange",
+  "name": "Per-project",
+  "whatItIs": "A pre-scoped project organized into a focused sprint. Deliverables, timeline, and \"done\" are defined up front.",
+  "howItWorks": "We scope it together, then I organize the deliverables into a series of two-week sprints. You get finished assets without managing the day-to-day.",
+  "bestFor": "When you need a batch of assets fast, like after a positioning refresh when your deck, datasheets, and website copy all need to catch up.",
+  "costLabel": "Pricing",
+  "costValue": "Dependent on project scope",
+  "costNote": ""
+}
