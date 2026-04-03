@@ -1,7 +1,50 @@
 {
-  "siteTitle": "Ben Thiefels \u2014 Senior Product Marketing for B2B SaaS",
-  "calendlyUrl": "https://calendly.com/ben-thiefels/30-minute-meeting",
+  "testimonialSection": {
+    "sectionTag": "Happy Clients",
+    "title": "Trusted by marketing leaders at companies of every stage."
+  },
+  "about": {
+    "paragraph1": "<strong>I help B2B SaaS teams get product marketing done without hiring full-time.</strong> Over the last seven years, I've worked with 70+ companies, from early-stage startups to enterprise teams.",
+    "paragraph2": "My background is a bit unusual for a product marketer. I spent years in UX, design, and project management before finding my way to PMM. That's why I can own the strategy and still be the person who builds the deck, writes the copy, or ships the landing page. I'm just as comfortable in a leadership meeting as I am designing in Figma.",
+    "paragraph3": "I went fractional because I do my best work when I'm solving new problems. New product, new market, new team. After doing it dozens of times, I can ramp quickly and make an impact with very little direction. Point me at a goal and I'll figure out the rest.",
+    "stat1Number": "15+",
+    "stat2Number": "70+",
+    "stat3Number": "100%",
+    "stat3Label": "referral based",
+    "sectionTag": "About",
+    "stat2Label": "B2B SaaS clients",
+    "stat1Label": "years in marketing",
+    "title": "Hi, I'm Ben"
+  },
+  "cta": {
+    "sectionTag": "Let's Talk",
+    "title": "Ready to move faster?",
+    "subtitle": "Whether you need a focused sprint or ongoing support, I'd love to hear what you're working on.",
+    "buttonText": "Schedule a Call"
+  },
+  "siteTitle": "Senior PMM for B2B SaaS",
   "linkedinUrl": "https://www.linkedin.com/in/bthiefels/",
+  "engagements": {
+    "sectionTag": "How We Work Together",
+    "title": "Focused projects when you need output fast. Embedded support when you need ongoing coverage."
+  },
+  "workSection": {
+    "sectionTag": "Selected Work",
+    "title": "A selection of projects across web, product marketing, and design."
+  },
+  "calendlyUrl": "https://calendly.com/ben-thiefels/30-minute-meeting",
+  "icp": {
+    "card1Detail": "Series A–B · 10–100 employees",
+    "card2Detail": "Series C–D+ · 100+ employees",
+    "sectionTag": "Where I Fit In",
+    "card2Title": "Scaling & Enterprise",
+    "card1Title": "Early & Growth-stage",
+    "subtitle": "My role can shift depending on where you're at.",
+    "title": "I work across a range of industries and growth stages.",
+    "industries": "Martech, Fintech, Cybersecurity, Logistics, Med Tech, AI, HR Tech",
+    "card2Items": "Cover parental leave or fill open roles during hiring gaps\nAdd senior capacity when work is outpacing headcount\nTake over a product portfolio and own messaging, positioning, and launches\nManage and mentor a PMM or marketing team\nBuild and run sales/cs trainings and assist with SKOs",
+    "card1Items": "Own the PMM function end-to-end, reporting to the CMO or founder\nAct as an execution partner alongside an existing PMM team\nBuild foundational messaging and positioning as the product evolves\nCreate the core asset library: decks, datasheets, case studies, and website copy\nStand up launch processes and enablement programs from scratch"
+  },
   "hero": {
     "tag": "Available for Q2 2026",
     "headlinePart1": "Move faster",
@@ -11,64 +54,21 @@
     "ctaPrimary": "Schedule a Call",
     "ctaSecondary": "See My Work"
   },
-  "about": {
-    "sectionTag": "About",
-    "title": "Hi, I'm Ben",
-    "paragraph1": "<strong>I help B2B SaaS teams get product marketing done without hiring full-time.</strong> Over the last seven years, I've worked with 70+ companies, from early-stage startups to enterprise teams.",
-    "paragraph2": "My background is a bit unusual for a product marketer. I spent years in UX, design, and project management before finding my way to PMM. That's why I can own the strategy and still be the person who builds the deck, writes the copy, or ships the landing page. I'm just as comfortable in a leadership meeting as I am designing in Figma.",
-    "paragraph3": "I went fractional because I do my best work when I'm solving new problems. New product, new market, new team. After doing it dozens of times, I can ramp quickly and make an impact with very little direction. Point me at a goal and I'll figure out the rest.",
-    "stat1Number": "15+",
-    "stat1Label": "years in marketing",
-    "stat2Number": "70+",
-    "stat2Label": "B2B SaaS clients",
-    "stat3Number": "100%",
-    "stat3Label": "referral based"
-  },
-  "icp": {
-    "sectionTag": "Where I Fit In",
-    "title": "I work across a range of industries and growth stages.",
-    "industries": "Martech, Fintech, Cybersecurity, Logistics, Med Tech, AI, HR Tech",
-    "subtitle": "My role can shift depending on where you're at.",
-    "card1Title": "Early & Growth-stage",
-    "card1Detail": "Series A\u2013B \u00b7 10\u2013100 employees",
-    "card1Items": "Own the PMM function end-to-end, reporting to the CMO or founder\nAct as an execution partner alongside an existing PMM team\nBuild foundational messaging and positioning as the product evolves\nCreate the core asset library: decks, datasheets, case studies, and website copy\nStand up launch processes and enablement programs from scratch",
-    "card2Title": "Scaling & Enterprise",
-    "card2Detail": "Series C\u2013D+ \u00b7 100+ employees",
-    "card2Items": "Cover parental leave or fill open roles during hiring gaps\nAdd senior capacity when work is outpacing headcount\nTake over a product portfolio and own messaging, positioning, and launches\nManage and mentor a PMM or marketing team\nBuild and run sales/cs trainings and assist with SKOs"
+  "footer": {
+    "text": "© 2026 Ben Thiefels. All rights reserved."
   },
   "services": {
-    "sectionTag": "How I Help",
-    "title": "I do the thinking and the making.",
-    "subtitle": "Most PMMs hand off execution. I own the full process, from research and strategy through content, design, and delivery.",
-    "col1Icon": "\ud83d\udd0d",
-    "col1Title": "Research & Strategy",
-    "col1Items": "Win/Loss Interviews\nCompetitive Research\nVoice of the Customer\nSales Call Analysis\nICP Definition & Refinement\nMessaging & Positioning\nProduct/Feature Launches\nSales Enablement",
-    "col2Icon": "\u270d",
-    "col2Title": "Content & Enablement",
-    "col2Items": "Email Workflows\nBlogs & Thought Leadership\nGuides & Whitepapers\nCase Studies\nProduct Datasheets\nInteractive Product Demos\nSales & Pitch Decks\nBattlecards",
-    "col3Icon": "\ud83c\udfa8",
     "col3Title": "Web & Design",
-    "col3Items": "Website & Landing Pages\nExplainer Videos\nPrint & PDF\nTradeshow Materials\nSocial/Paid Media Graphics"
-  },
-  "engagements": {
-    "sectionTag": "How We Work Together",
-    "title": "Focused projects when you need output fast. Embedded support when you need ongoing coverage."
-  },
-  "testimonialSection": {
-    "sectionTag": "Happy Clients",
-    "title": "Trusted by marketing leaders at companies of every stage."
-  },
-  "workSection": {
-    "sectionTag": "Selected Work",
-    "title": "A selection of projects across web, product marketing, and design."
-  },
-  "cta": {
-    "sectionTag": "Let's Talk",
-    "title": "Ready to move faster?",
-    "subtitle": "Whether you need a focused sprint or ongoing support, I'd love to hear what you're working on.",
-    "buttonText": "Schedule a Call"
-  },
-  "footer": {
-    "text": "\u00a9 2026 Ben Thiefels. All rights reserved."
+    "col2Title": "Content & Enablement",
+    "col1Title": "Research & Strategy",
+    "col1Icon": "🔍",
+    "col2Icon": "✍",
+    "col3Icon": "🎨",
+    "col3Items": "Website & Landing Pages\nExplainer Videos\nPrint & PDF\nTradeshow Materials\nSocial/Paid Media Graphics",
+    "col2Items": "Email Workflows\nBlogs & Thought Leadership\nGuides & Whitepapers\nCase Studies\nProduct Datasheets\nInteractive Product Demos\nSales & Pitch Decks\nBattlecards",
+    "col1Items": "Win/Loss Interviews\nCompetitive Research\nVoice of the Customer\nSales Call Analysis\nICP Definition & Refinement\nMessaging & Positioning\nProduct/Feature Launches\nSales Enablement",
+    "sectionTag": "How I Help",
+    "subtitle": "Most PMMs hand off execution. I own the full process, from research and strategy through content, design, and delivery.",
+    "title": "I do the thinking and the making."
   }
 }
