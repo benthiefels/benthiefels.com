@@ -1,0 +1,16 @@
+{
+  "sectionTag": "Where I Fit In",
+  "title": "I work across a range of industries and growth stages.",
+  "industries": "Martech, Fintech, Cybersecurity, Logistics, Med Tech, AI, HR Tech",
+  "subtitle": "My role can shift depending on where you're at.",
+  "card1": {
+    "card1Title": "Early & Growth-stage",
+    "card1Detail": "Series A\u2013B \u00b7 10\u2013100 employees",
+    "card1Items": "Own the PMM function end-to-end, reporting to the CMO or founder\nAct as an execution partner alongside an existing PMM team\nBuild foundational messaging and positioning as the product evolves\nCreate the core asset library: decks, datasheets, case studies, and website copy\nStand up launch processes and enablement programs from scratch"
+  },
+  "card2": {
+    "card2Title": "Scaling & Enterprise",
+    "card2Detail": "Series C\u2013D+ \u00b7 100+ employees",
+    "card2Items": "Cover parental leave or fill open roles during hiring gaps\nAdd senior capacity when work is outpacing headcount\nTake over a product portfolio and own messaging, positioning, and launches\nManage and mentor a PMM or marketing team\nBuild and run sales/cs trainings and assist with SKOs"
+  }
+}

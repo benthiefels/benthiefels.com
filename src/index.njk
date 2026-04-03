@@ -6,7 +6,7 @@ permalink: /index.html
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ site.siteTitle }}</title>
+<title>{{ general.siteTitle }}</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -648,7 +648,7 @@ footer {
       <a href="#services">Services</a>
       <a href="#testimonials">Clients</a>
       <a href="#work">Work</a>
-      <a href="{{ site.calendlyUrl }}" target="_blank" class="nav-cta">{{ site.hero.ctaPrimary }}</a>
+      <a href="{{ general.calendlyUrl }}" target="_blank" class="nav-cta">{{ hero.ctaPrimary }}</a>
     </div>
   </div>
 </nav>
@@ -656,12 +656,12 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">{{ site.hero.tag }}</div>
-    <h1>{{ site.hero.headlinePart1 }}<br><em>{{ site.hero.headlineEmphasis }}</em> {{ site.hero.headlinePart2 }}</h1>
-    <p class="hero-sub">{{ site.hero.subtext }}</p>
+    <div class="hero-tag">{{ hero.tag }}</div>
+    <h1>{{ hero.headlinePart1 }}<br><em>{{ hero.headlineEmphasis }}</em> {{ hero.headlinePart2 }}</h1>
+    <p class="hero-sub">{{ hero.subtext }}</p>
     <div class="hero-cta-group">
-      <a href="{{ site.calendlyUrl }}" target="_blank" class="btn-primary">{{ site.hero.ctaPrimary }} <span class="arrow-slide">&rarr;</span></a>
-      <a href="#work" class="btn-secondary">{{ site.hero.ctaSecondary }}</a>
+      <a href="{{ general.calendlyUrl }}" target="_blank" class="btn-primary">{{ hero.ctaPrimary }} <span class="arrow-slide">&rarr;</span></a>
+      <a href="#work" class="btn-secondary">{{ hero.ctaSecondary }}</a>
     </div>
   </div>
 </section>
@@ -674,26 +674,26 @@ footer {
         <div class="about-image-block"></div>
       </div>
       <div class="about-text">
-        <div class="section-tag reveal">{{ site.about.sectionTag }}</div>
-        <h2 class="section-title reveal reveal-delay-1">{{ site.about.title }}</h2>
-        <p class="reveal reveal-delay-2">{{ site.about.paragraph1 | safe }}</p>
-        <p class="reveal reveal-delay-3">{{ site.about.paragraph2 | safe }}</p>
-        <p class="reveal reveal-delay-3">{{ site.about.paragraph3 | safe }}</p>
+        <div class="section-tag reveal">{{ about.sectionTag }}</div>
+        <h2 class="section-title reveal reveal-delay-1">{{ about.title }}</h2>
+        <p class="reveal reveal-delay-2">{{ about.paragraph1 | safe }}</p>
+        <p class="reveal reveal-delay-3">{{ about.paragraph2 | safe }}</p>
+        <p class="reveal reveal-delay-3">{{ about.paragraph3 | safe }}</p>
         <div class="about-stats reveal reveal-delay-3">
           <div class="about-stat">
-            <div class="about-stat-number">{{ site.about.stat1Number }}</div>
-            <div class="about-stat-label">{{ site.about.stat1Label | replace("marketing", "marketing") | safe }}</div>
+            <div class="about-stat-number">{{ about.stats_section.stat1Number }}</div>
+            <div class="about-stat-label">{{ about.stats_section.stat1Label | replace("marketing", "marketing") | safe }}</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-number">{{ site.about.stat2Number }}</div>
-            <div class="about-stat-label">{{ site.about.stat2Label | safe }}</div>
+            <div class="about-stat-number">{{ about.stats_section.stat2Number }}</div>
+            <div class="about-stat-label">{{ about.stats_section.stat2Label | safe }}</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-number">{{ site.about.stat3Number }}</div>
-            <div class="about-stat-label">{{ site.about.stat3Label | safe }}</div>
+            <div class="about-stat-number">{{ about.stats_section.stat3Number }}</div>
+            <div class="about-stat-label">{{ about.stats_section.stat3Label | safe }}</div>
           </div>
         </div>
-        <a href="{{ site.linkedinUrl }}" target="_blank" class="linkedin-btn reveal reveal-delay-4">
+        <a href="{{ general.linkedinUrl }}" target="_blank" class="linkedin-btn reveal reveal-delay-4">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           Connect on LinkedIn
         </a>
@@ -705,30 +705,30 @@ footer {
 <!-- WHERE I FIT IN -->
 <section id="icp">
   <div class="section-inner">
-    <div class="section-tag reveal">{{ site.icp.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ site.icp.title }}</h2>
+    <div class="section-tag reveal">{{ icp.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ icp.title }}</h2>
     <div class="icp-pills reveal reveal-delay-2">
-      {% for industry in site.icp.industries | split(",") %}
+      {% for industry in icp.industries | split(",") %}
       <span class="icp-pill">{{ industry | trim }}</span>
       {% endfor %}
       <span class="icp-pill muted">+ others</span>
     </div>
-    <h3 class="section-title reveal" style="font-size: 1.4rem; margin-top: 2.5rem;">{{ site.icp.subtitle }}</h3>
+    <h3 class="section-title reveal" style="font-size: 1.4rem; margin-top: 2.5rem;">{{ icp.subtitle }}</h3>
     <div class="icp-cards">
       <div class="icp-card reveal">
-        <div class="icp-card-stage">{{ site.icp.card1Title }}</div>
-        <div class="icp-card-detail">{{ site.icp.card1Detail }}</div>
+        <div class="icp-card-stage">{{ icp.card1.card1Title }}</div>
+        <div class="icp-card-detail">{{ icp.card1.card1Detail }}</div>
         <ul>
-          {% for item in site.icp.card1Items | split("\n") %}
+          {% for item in icp.card1.card1Items | split("\n") %}
           <li>{{ item | trim }}</li>
           {% endfor %}
         </ul>
       </div>
       <div class="icp-card reveal reveal-delay-1">
-        <div class="icp-card-stage">{{ site.icp.card2Title }}</div>
-        <div class="icp-card-detail">{{ site.icp.card2Detail }}</div>
+        <div class="icp-card-stage">{{ icp.card2.card2Title }}</div>
+        <div class="icp-card-detail">{{ icp.card2.card2Detail }}</div>
         <ul>
-          {% for item in site.icp.card2Items | split("\n") %}
+          {% for item in icp.card2.card2Items | split("\n") %}
           <li>{{ item | trim }}</li>
           {% endfor %}
         </ul>
@@ -740,33 +740,33 @@ footer {
 <!-- SERVICES -->
 <section id="services">
   <div class="section-inner">
-    <div class="section-tag reveal">{{ site.services.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ site.services.title }}</h2>
-    <p class="section-sub reveal reveal-delay-2">{{ site.services.subtitle }}</p>
+    <div class="section-tag reveal">{{ services.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ services.title }}</h2>
+    <p class="section-sub reveal reveal-delay-2">{{ services.subtitle }}</p>
     <div class="services-columns">
       <div class="service-col reveal">
-        <div class="service-col-icon" style="background: var(--accent-light);">{{ site.services.col1Icon }}</div>
-        <div class="service-col-title">{{ site.services.col1Title }}</div>
+        <div class="service-col-icon" style="background: var(--accent-light);">{{ services.column1.col1Icon }}</div>
+        <div class="service-col-title">{{ services.column1.col1Title }}</div>
         <ul>
-          {% for item in site.services.col1Items | split("\n") %}
+          {% for item in services.column1.col1Items | split("\n") %}
           <li>{{ item | trim }}</li>
           {% endfor %}
         </ul>
       </div>
       <div class="service-col reveal reveal-delay-1">
-        <div class="service-col-icon" style="background: var(--blue-light);">{{ site.services.col2Icon }}</div>
-        <div class="service-col-title">{{ site.services.col2Title }}</div>
+        <div class="service-col-icon" style="background: var(--blue-light);">{{ services.column2.col2Icon }}</div>
+        <div class="service-col-title">{{ services.column2.col2Title }}</div>
         <ul>
-          {% for item in site.services.col2Items | split("\n") %}
+          {% for item in services.column2.col2Items | split("\n") %}
           <li>{{ item | trim }}</li>
           {% endfor %}
         </ul>
       </div>
       <div class="service-col reveal reveal-delay-2">
-        <div class="service-col-icon" style="background: var(--green-light);">{{ site.services.col3Icon }}</div>
-        <div class="service-col-title">{{ site.services.col3Title }}</div>
+        <div class="service-col-icon" style="background: var(--green-light);">{{ services.column3.col3Icon }}</div>
+        <div class="service-col-title">{{ services.column3.col3Title }}</div>
         <ul>
-          {% for item in site.services.col3Items | split("\n") %}
+          {% for item in services.column3.col3Items | split("\n") %}
           <li>{{ item | trim }}</li>
           {% endfor %}
         </ul>
@@ -778,8 +778,8 @@ footer {
 <!-- ENGAGEMENTS -->
 <section id="engagements">
   <div class="section-inner">
-    <div class="section-tag reveal">{{ site.engagements.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ site.engagements.title }}</h2>
+    <div class="section-tag reveal">{{ engagementsHeader.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ engagementsHeader.title }}</h2>
     <div class="engagements-grid">
       {% for card in engagementCards %}
       <div class="engagement-card reveal {% if loop.index > 1 %}reveal-delay-{{ loop.index0 }}{% endif %}">
@@ -807,8 +807,8 @@ footer {
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-inner">
-    <div class="section-tag reveal">{{ site.testimonialSection.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ site.testimonialSection.title }}</h2>
+    <div class="section-tag reveal">{{ testimonialsHeader.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ testimonialsHeader.title }}</h2>
     <div class="logo-bars reveal reveal-delay-2">
       <div class="logo-bar">
         <div class="logo-track">
@@ -879,8 +879,8 @@ footer {
 <!-- WORK -->
 <section id="work">
   <div class="section-inner">
-    <div class="section-tag reveal">{{ site.workSection.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ site.workSection.title }}</h2>
+    <div class="section-tag reveal">{{ workHeader.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ workHeader.title }}</h2>
     <div class="work-categories">
       <button class="work-cat-btn active" data-cat="all">All</button>
       <button class="work-cat-btn" data-cat="content">Top of Funnel</button>
@@ -901,16 +901,16 @@ footer {
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="section-inner">
-    <div class="section-tag" style="color: var(--accent);">{{ site.cta.sectionTag }}</div>
-    <h2 class="section-title">{{ site.cta.title }}</h2>
-    <p class="section-sub">{{ site.cta.subtitle }}</p>
-    <a href="{{ site.calendlyUrl }}" target="_blank" class="cta-btn-white">{{ site.cta.buttonText }} <span class="arrow-slide">&rarr;</span></a>
+    <div class="section-tag" style="color: var(--accent);">{{ cta.sectionTag }}</div>
+    <h2 class="section-title">{{ cta.title }}</h2>
+    <p class="section-sub">{{ cta.subtitle }}</p>
+    <a href="{{ general.calendlyUrl }}" target="_blank" class="cta-btn-white">{{ cta.buttonText }} <span class="arrow-slide">&rarr;</span></a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div>{{ site.footer.text }}</div>
+  <div>{{ footerData.text }}</div>
 </footer>
 
 <script>

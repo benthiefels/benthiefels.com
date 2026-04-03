@@ -1,0 +1,20 @@
+{
+  "sectionTag": "How I Help",
+  "title": "I do the thinking and the making.",
+  "subtitle": "Most PMMs hand off execution. I own the full process, from research and strategy through content, design, and delivery.",
+  "column1": {
+    "col1Icon": "\ud83d\udd0d",
+    "col1Title": "Research & Strategy",
+    "col1Items": "Win/Loss Interviews\nCompetitive Research\nVoice of the Customer\nSales Call Analysis\nICP Definition & Refinement\nMessaging & Positioning\nProduct/Feature Launches\nSales Enablement"
+  },
+  "column2": {
+    "col2Icon": "\u270d",
+    "col2Title": "Content & Enablement",
+    "col2Items": "Email Workflows\nBlogs & Thought Leadership\nGuides & Whitepapers\nCase Studies\nProduct Datasheets\nInteractive Product Demos\nSales & Pitch Decks\nBattlecards"
+  },
+  "column3": {
+    "col3Icon": "\ud83c\udfa8",
+    "col3Title": "Web & Design",
+    "col3Items": "Website & Landing Pages\nExplainer Videos\nPrint & PDF\nTradeshow Materials\nSocial/Paid Media Graphics"
+  }
+}

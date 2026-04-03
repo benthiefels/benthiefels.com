@@ -1,0 +1,15 @@
+{
+  "sectionTag": "About",
+  "title": "Hi, I'm Ben",
+  "paragraph1": "<strong>I help B2B SaaS teams get product marketing done without hiring full-time.</strong> Over the last seven years, I've worked with 70+ companies, from early-stage startups to enterprise teams.",
+  "paragraph2": "My background is a bit unusual for a product marketer. I spent years in UX, design, and project management before finding my way to PMM. That's why I can own the strategy and still be the person who builds the deck, writes the copy, or ships the landing page. I'm just as comfortable in a leadership meeting as I am designing in Figma.",
+  "paragraph3": "I went fractional because I do my best work when I'm solving new problems. New product, new market, new team. After doing it dozens of times, I can ramp quickly and make an impact with very little direction. Point me at a goal and I'll figure out the rest.",
+  "stats_section": {
+    "stat1Number": "15+",
+    "stat1Label": "years in marketing",
+    "stat2Number": "70+",
+    "stat2Label": "B2B SaaS clients",
+    "stat3Number": "100%",
+    "stat3Label": "referral based"
+  }
+}

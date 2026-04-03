@@ -1,66 +1,68 @@
-[
-  {
-    "src": "logos/Zeta.svg",
-    "alt": "Zeta Global"
-  },
-  {
-    "src": "logos/UF.svg",
-    "alt": "Uber Freight"
-  },
-  {
-    "src": "logos/CapIQ.svg",
-    "alt": "CaptivateIQ"
-  },
-  {
-    "src": "logos/Cordial.svg",
-    "alt": "Cordial"
-  },
-  {
-    "src": "logos/Asana.svg",
-    "alt": "Asana"
-  },
-  {
-    "src": "logos/Cisco.svg",
-    "alt": "Cisco"
-  },
-  {
-    "src": "logos/Heroku.svg",
-    "alt": "Heroku"
-  },
-  {
-    "src": "logos/Roche.svg",
-    "alt": "Roche"
-  },
-  {
-    "src": "logos/Accufix.svg",
-    "alt": "Accufix Surgical"
-  },
-  {
-    "src": "logos/Tim.svg",
-    "alt": "Tim"
-  },
-  {
-    "src": "logos/NR.svg",
-    "alt": "New Relic"
-  },
-  {
-    "src": "logos/Airship.svg",
-    "alt": "Airship"
-  },
-  {
-    "src": "logos/Mesh.svg",
-    "alt": "Mesh"
-  },
-  {
-    "src": "logos/mailing.svg",
-    "alt": "mailing.com"
-  },
-  {
-    "src": "logos/Transcepta.svg",
-    "alt": "Transcepta"
-  },
-  {
-    "src": "logos/SG.svg",
-    "alt": "Strike Graph"
-  }
-]
+{
+  "items": [
+    {
+      "src": "logos/Zeta.svg",
+      "alt": "Zeta Global"
+    },
+    {
+      "src": "logos/UF.svg",
+      "alt": "Uber Freight"
+    },
+    {
+      "src": "logos/CapIQ.svg",
+      "alt": "CaptivateIQ"
+    },
+    {
+      "src": "logos/Cordial.svg",
+      "alt": "Cordial"
+    },
+    {
+      "src": "logos/Asana.svg",
+      "alt": "Asana"
+    },
+    {
+      "src": "logos/Cisco.svg",
+      "alt": "Cisco"
+    },
+    {
+      "src": "logos/Heroku.svg",
+      "alt": "Heroku"
+    },
+    {
+      "src": "logos/Roche.svg",
+      "alt": "Roche"
+    },
+    {
+      "src": "logos/Accufix.svg",
+      "alt": "Accufix Surgical"
+    },
+    {
+      "src": "logos/Tim.svg",
+      "alt": "Tim"
+    },
+    {
+      "src": "logos/NR.svg",
+      "alt": "New Relic"
+    },
+    {
+      "src": "logos/Airship.svg",
+      "alt": "Airship"
+    },
+    {
+      "src": "logos/Mesh.svg",
+      "alt": "Mesh"
+    },
+    {
+      "src": "logos/mailing.svg",
+      "alt": "mailing.com"
+    },
+    {
+      "src": "logos/Transcepta.svg",
+      "alt": "Transcepta"
+    },
+    {
+      "src": "logos/SG.svg",
+      "alt": "Strike Graph"
+    }
+  ]
+}

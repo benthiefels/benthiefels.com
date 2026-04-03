@@ -7,127 +7,169 @@ public_folder: "photos"
 
 collections:
   # ==========================================
-  # SITE SETTINGS (single file)
+  # SITE CONTENT - Each section gets its own page
   # ==========================================
-  - name: "settings"
-    label: "Site Settings"
+  - name: "site"
+    label: "Site Content"
     files:
-      - name: "site"
-        label: "Site Content"
-        file: "content/site.json"
+
+      # --- GENERAL SETTINGS ---
+      - name: "general"
+        label: "⚙️ General Settings"
+        file: "content/general.json"
         fields:
           - { name: "siteTitle", label: "Browser Tab Title", widget: "string" }
-          - { name: "calendlyUrl", label: "Calendly URL", widget: "string" }
+          - { name: "calendlyUrl", label: "Calendly URL", widget: "string", hint: "Your scheduling link used for all CTA buttons" }
           - { name: "linkedinUrl", label: "LinkedIn URL", widget: "string" }
 
-          - label: "Hero Section"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { name: "tag", label: "Availability Tag (e.g. 'Available for Q2 2026')", widget: "string" }
-              - { name: "headlinePart1", label: "Headline Part 1", widget: "string" }
-              - { name: "headlineEmphasis", label: "Headline Italic Word", widget: "string" }
-              - { name: "headlinePart2", label: "Headline Part 2", widget: "string" }
-              - { name: "subtext", label: "Subtext", widget: "text" }
-              - { name: "ctaPrimary", label: "Primary Button Text", widget: "string" }
-              - { name: "ctaSecondary", label: "Secondary Button Text", widget: "string" }
+      # --- HERO ---
+      - name: "hero"
+        label: "🏠 Hero Section"
+        file: "content/hero.json"
+        fields:
+          - { name: "tag", label: "Availability Tag", widget: "string", hint: "e.g. 'Available for Q2 2026'" }
+          - { name: "headlinePart1", label: "Headline Part 1", widget: "string", hint: "Text before the italic word" }
+          - { name: "headlineEmphasis", label: "Headline Italic Word", widget: "string", hint: "The emphasized word in orange italic" }
+          - { name: "headlinePart2", label: "Headline Part 2", widget: "string", hint: "Text after the italic word" }
+          - { name: "subtext", label: "Subtext", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+          - { name: "ctaPrimary", label: "Primary Button Text", widget: "string" }
+          - { name: "ctaSecondary", label: "Secondary Button Text", widget: "string" }
 
-          - label: "About Section"
-            name: "about"
+      # --- ABOUT ---
+      - name: "about"
+        label: "👋 About Section"
+        file: "content/about.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "paragraph1", label: "Paragraph 1", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], hint: "Use bold for the opening statement" }
+          - { name: "paragraph2", label: "Paragraph 2", widget: "markdown", buttons: ["bold", "italic"], editor_components: [] }
+          - { name: "paragraph3", label: "Paragraph 3", widget: "markdown", buttons: ["bold", "italic"], editor_components: [] }
+          - label: "Stats"
+            name: "stats_section"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-              - { name: "paragraph1", label: "Paragraph 1 (supports <strong> tags)", widget: "text" }
-              - { name: "paragraph2", label: "Paragraph 2", widget: "text" }
-              - { name: "paragraph3", label: "Paragraph 3", widget: "text" }
-              - { name: "stat1Number", label: "Stat 1 Number", widget: "string" }
-              - { name: "stat1Label", label: "Stat 1 Label", widget: "string" }
+              - { name: "stat1Number", label: "Stat 1 Number", widget: "string", hint: "e.g. '15+'" }
+              - { name: "stat1Label", label: "Stat 1 Label", widget: "string", hint: "e.g. 'years in marketing'" }
               - { name: "stat2Number", label: "Stat 2 Number", widget: "string" }
               - { name: "stat2Label", label: "Stat 2 Label", widget: "string" }
               - { name: "stat3Number", label: "Stat 3 Number", widget: "string" }
               - { name: "stat3Label", label: "Stat 3 Label", widget: "string" }
 
-          - label: "Where I Fit In Section"
-            name: "icp"
+      # --- WHERE I FIT IN ---
+      - name: "icp"
+        label: "🎯 Where I Fit In"
+        file: "content/icp.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "industries", label: "Industries", widget: "string", hint: "Comma separated, e.g. 'Martech, Fintech, Cybersecurity'" }
+          - { name: "subtitle", label: "Subtitle", widget: "string" }
+          - label: "Early & Growth-stage Card"
+            name: "card1"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-              - { name: "industries", label: "Industries (comma separated)", widget: "string" }
-              - { name: "subtitle", label: "Subtitle", widget: "string" }
-              - { name: "card1Title", label: "Card 1 Title", widget: "string" }
-              - { name: "card1Detail", label: "Card 1 Detail", widget: "string" }
-              - { name: "card1Items", label: "Card 1 Items (one per line)", widget: "text" }
-              - { name: "card2Title", label: "Card 2 Title", widget: "string" }
-              - { name: "card2Detail", label: "Card 2 Detail", widget: "string" }
-              - { name: "card2Items", label: "Card 2 Items (one per line)", widget: "text" }
-
-          - label: "Services Section"
-            name: "services"
+              - { name: "card1Title", label: "Title", widget: "string" }
+              - { name: "card1Detail", label: "Detail", widget: "string", hint: "e.g. 'Series A–B · 10–100 employees'" }
+              - { name: "card1Items", label: "Bullet Points (one per line)", widget: "text" }
+          - label: "Scaling & Enterprise Card"
+            name: "card2"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-              - { name: "subtitle", label: "Subtitle", widget: "text" }
-              - { name: "col1Icon", label: "Column 1 Icon (emoji)", widget: "string" }
-              - { name: "col1Title", label: "Column 1 Title", widget: "string" }
-              - { name: "col1Items", label: "Column 1 Items (one per line)", widget: "text" }
-              - { name: "col2Icon", label: "Column 2 Icon (emoji)", widget: "string" }
-              - { name: "col2Title", label: "Column 2 Title", widget: "string" }
-              - { name: "col2Items", label: "Column 2 Items (one per line)", widget: "text" }
-              - { name: "col3Icon", label: "Column 3 Icon (emoji)", widget: "string" }
-              - { name: "col3Title", label: "Column 3 Title", widget: "string" }
-              - { name: "col3Items", label: "Column 3 Items (one per line)", widget: "text" }
+              - { name: "card2Title", label: "Title", widget: "string" }
+              - { name: "card2Detail", label: "Detail", widget: "string" }
+              - { name: "card2Items", label: "Bullet Points (one per line)", widget: "text" }
 
-          - label: "Engagements Section"
-            name: "engagements"
+      # --- SERVICES ---
+      - name: "services"
+        label: "🔧 Services (How I Help)"
+        file: "content/services.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "subtitle", label: "Subtitle", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+          - label: "Column 1"
+            name: "column1"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-
-          - label: "Testimonials Section"
-            name: "testimonialSection"
+              - { name: "col1Icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "col1Title", label: "Title", widget: "string" }
+              - { name: "col1Items", label: "Services (one per line)", widget: "text" }
+          - label: "Column 2"
+            name: "column2"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-
-          - label: "Work Section"
-            name: "workSection"
+              - { name: "col2Icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "col2Title", label: "Title", widget: "string" }
+              - { name: "col2Items", label: "Services (one per line)", widget: "text" }
+          - label: "Column 3"
+            name: "column3"
             widget: "object"
+            collapsed: false
             fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
+              - { name: "col3Icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "col3Title", label: "Title", widget: "string" }
+              - { name: "col3Items", label: "Services (one per line)", widget: "text" }
 
-          - label: "CTA Section"
-            name: "cta"
-            widget: "object"
-            fields:
-              - { name: "sectionTag", label: "Section Tag", widget: "string" }
-              - { name: "title", label: "Title", widget: "string" }
-              - { name: "subtitle", label: "Subtitle", widget: "text" }
-              - { name: "buttonText", label: "Button Text", widget: "string" }
+      # --- ENGAGEMENTS HEADER ---
+      - name: "engagements-header"
+        label: "🤝 Engagements Header"
+        file: "content/engagements-header.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
 
-          - label: "Footer"
-            name: "footer"
-            widget: "object"
-            fields:
-              - { name: "text", label: "Footer Text", widget: "string" }
+      # --- TESTIMONIALS HEADER ---
+      - name: "testimonials-header"
+        label: "⭐ Testimonials Header"
+        file: "content/testimonials-header.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
 
-      # LOGO BAR
+      # --- CLIENT LOGOS ---
       - name: "logos"
-        label: "Client Logos"
+        label: "🏢 Client Logos"
         file: "content/logos.json"
         fields:
-          - name: "logos"
+          - name: "items"
             label: "Logos"
             label_singular: "Logo"
             widget: "list"
+            summary: "{{fields.alt}}"
             fields:
-              - { name: "src", label: "Logo File Path (e.g. logos/Zeta.svg)", widget: "string" }
+              - { name: "src", label: "Logo File (e.g. logos/Zeta.svg)", widget: "string" }
               - { name: "alt", label: "Company Name", widget: "string" }
+
+      # --- WORK HEADER ---
+      - name: "work-header"
+        label: "💼 Work Section Header"
+        file: "content/work-header.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+
+      # --- CTA ---
+      - name: "cta"
+        label: "📣 Call to Action"
+        file: "content/cta.json"
+        fields:
+          - { name: "sectionTag", label: "Section Tag", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "subtitle", label: "Subtitle", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+          - { name: "buttonText", label: "Button Text", widget: "string" }
+
+      # --- FOOTER ---
+      - name: "footer"
+        label: "📝 Footer"
+        file: "content/footer.json"
+        fields:
+          - { name: "text", label: "Footer Text", widget: "string" }
 
   # ==========================================
   # ENGAGEMENT CARDS
@@ -141,17 +183,18 @@ collections:
     create: true
     slug: "{{fields.order}}-{{fields.name | slug}}"
     sortable_fields: ["order"]
+    summary: "{{fields.icon}} {{fields.name}} — {{fields.costValue}}"
     fields:
       - { name: "order", label: "Display Order", widget: "number", value_type: "int" }
       - { name: "icon", label: "Icon (emoji)", widget: "string" }
       - { name: "iconColor", label: "Icon Color", widget: "select", options: ["orange", "blue", "green"] }
       - { name: "name", label: "Name", widget: "string" }
-      - { name: "whatItIs", label: "What It Is", widget: "text" }
-      - { name: "howItWorks", label: "How It Works", widget: "text" }
-      - { name: "bestFor", label: "Best For", widget: "text" }
-      - { name: "costLabel", label: "Cost Label (e.g. Average, Pricing, One-time project)", widget: "string" }
+      - { name: "whatItIs", label: "What It Is", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+      - { name: "howItWorks", label: "How It Works", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+      - { name: "bestFor", label: "Best For", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
+      - { name: "costLabel", label: "Cost Label", widget: "string", hint: "e.g. 'Average', 'Pricing', 'One-time project'" }
       - { name: "costValue", label: "Cost Value", widget: "string" }
-      - { name: "costNote", label: "Cost Note (optional, e.g. '3 month contract required')", widget: "string", required: false }
+      - { name: "costNote", label: "Cost Note (optional)", widget: "string", required: false, hint: "e.g. '(3 month contract required)'" }
 
   # ==========================================
   # TESTIMONIALS
@@ -165,11 +208,12 @@ collections:
     create: true
     slug: "{{fields.order}}-{{fields.name | slug}}"
     sortable_fields: ["order"]
+    summary: "{{fields.name}} — {{fields.role}}"
     fields:
       - { name: "order", label: "Display Order", widget: "number", value_type: "int" }
-      - { name: "featured", label: "Featured (shown above the fold)", widget: "boolean", default: false }
-      - { name: "headline", label: "Pull Quote Headline", widget: "string" }
-      - { name: "quote", label: "Full Testimonial", widget: "text" }
+      - { name: "featured", label: "Featured (shown above the fold)", widget: "boolean", default: false, hint: "Featured testimonials appear first without clicking 'Show All'" }
+      - { name: "headline", label: "Pull Quote Headline", widget: "string", hint: "The short highlighted quote shown in large text" }
+      - { name: "quote", label: "Full Testimonial", widget: "markdown", minimal: true, buttons: ["bold", "italic"], editor_components: [] }
       - { name: "name", label: "Person's Name", widget: "string" }
       - { name: "role", label: "Title & Company", widget: "string" }
       - { name: "photo", label: "Headshot", widget: "image" }
@@ -186,6 +230,7 @@ collections:
     create: true
     slug: "{{fields.order}}-{{fields.title | slug}}"
     sortable_fields: ["order"]
+    summary: "{{fields.categoryIcon}} {{fields.title}}"
     fields:
       - { name: "order", label: "Display Order", widget: "number", value_type: "int" }
       - name: "category"
