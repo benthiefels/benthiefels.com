@@ -216,7 +216,7 @@ section { padding: 5rem 2rem; }
 .about-image-wrapper { position: relative; }
 .about-image-block {
   width: 100%; aspect-ratio: 4/5; border-radius: 20px;
-  background: url('Headshot.jpg') center top/cover;
+  background: url('headshot2026.jpg') center top/cover;
   position: relative; overflow: hidden; min-height: 300px;
 }
 .about-text p {
@@ -583,6 +583,8 @@ footer {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
 
 /* === TABLET === */
 @media (max-width: 1024px) {
@@ -644,9 +646,9 @@ footer {
     <a href="#" class="nav-logo">Ben Thiefels<span>.</span></a>
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#services">Services</a>
       <a href="#testimonials">Clients</a>
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
       <a href="#work">Work</a>
       <a href="{{ general.calendlyUrl }}" target="_blank" class="nav-cta">{{ hero.ctaPrimary }}</a>
     </div>
@@ -698,6 +700,78 @@ footer {
           Connect on LinkedIn
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-tag reveal">{{ testimonialsHeader.sectionTag }}</div>
+    <h2 class="section-title reveal reveal-delay-1">{{ testimonialsHeader.title }}</h2>
+    <div class="logo-bars reveal reveal-delay-2">
+      <div class="logo-bar">
+        <div class="logo-track">
+          {% for logo in logos %}
+          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
+          {% endfor %}
+          {% for logo in logos %}
+          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
+          {% endfor %}
+        </div>
+      </div>
+      <div class="logo-bar">
+        <div class="logo-track reverse">
+          {% for logo in logos | reverse %}
+          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
+          {% endfor %}
+          {% for logo in logos | reverse %}
+          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {# Featured testimonials (shown above the fold) #}
+    <div class="testimonials-track">
+      {% for t in testimonials | selectattr("featured") %}
+      <div class="testimonial-card reveal {% if loop.index > 1 %}reveal-delay-{{ loop.index0 }}{% endif %}">
+        <div class="testimonial-card-header">
+          <div class="testimonial-quotemarks">&ldquo;</div>
+        </div>
+        <div class="testimonial-headline">"{{ t.headline }}"</div>
+        <div class="testimonial-quote">{{ t.quote }}</div>
+        <div class="testimonial-author-info">
+          <img src="{{ t.photo }}" alt="{{ t.name }}" class="testimonial-avatar">
+          <div>
+          <div class="testimonial-name">{{ t.name }}</div>
+          <div class="testimonial-role">{{ t.role }}</div>
+        </div></div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {# Hidden testimonials (shown on click) #}
+    <div class="testimonials-hidden" id="moreTestimonials">
+      {% for t in testimonials %}{% if not t.featured %}
+      <div class="testimonial-card">
+        <div class="testimonial-card-header">
+          <div class="testimonial-quotemarks">&ldquo;</div>
+        </div>
+        <div class="testimonial-headline">"{{ t.headline }}"</div>
+        <div class="testimonial-quote">{{ t.quote }}</div>
+        <div class="testimonial-author-info">
+          <img src="{{ t.photo }}" alt="{{ t.name }}" class="testimonial-avatar">
+          <div>
+          <div class="testimonial-name">{{ t.name }}</div>
+          <div class="testimonial-role">{{ t.role }}</div>
+        </div></div>
+      </div>
+      {% endif %}{% endfor %}
+    </div>
+
+    <div class="testimonials-more">
+      <button class="show-more-btn" id="showMoreBtn">Show All Testimonials</button>
     </div>
   </div>
 </section>
@@ -797,84 +871,12 @@ footer {
           <div class="engagement-sub-label">Best for</div>
           <div class="engagement-sub-text">{{ card.bestFor }}</div>
         </div>
-        <div class="engagement-cost">{{ card.costLabel }}<strong>{{ card.costValue }}</strong>{% if card.costNote %}<span style="display:block;font-size:0.75rem;font-weight:400;margin-top:0.25rem;text-transform:none;letter-spacing:0;">{{ card.costNote }}</span>{% endif %}</div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="section-inner">
-    <div class="section-tag reveal">{{ testimonialsHeader.sectionTag }}</div>
-    <h2 class="section-title reveal reveal-delay-1">{{ testimonialsHeader.title }}</h2>
-    <div class="logo-bars reveal reveal-delay-2">
-      <div class="logo-bar">
-        <div class="logo-track">
-          {% for logo in logos %}
-          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
-          {% endfor %}
-          {% for logo in logos %}
-          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
-          {% endfor %}
-        </div>
-      </div>
-      <div class="logo-bar">
-        <div class="logo-track reverse">
-          {% for logo in logos | reverse %}
-          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
-          {% endfor %}
-          {% for logo in logos | reverse %}
-          <img src="{{ logo.src }}" alt="{{ logo.alt }}">
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-    {# Featured testimonials (shown above the fold) #}
-    <div class="testimonials-track">
-      {% for t in testimonials %}{% if t.featured %}
-      <div class="testimonial-card reveal {% if loop.index > 1 %}reveal-delay-{{ loop.index0 }}{% endif %}">
-        <div class="testimonial-card-header">
-          <div class="testimonial-quotemarks">&ldquo;</div>
-        </div>
-        <div class="testimonial-headline">"{{ t.headline }}"</div>
-        <div class="testimonial-quote">{{ t.quote }}</div>
-        <div class="testimonial-author-info">
-          <img src="{{ t.photo }}" alt="{{ t.name }}" class="testimonial-avatar">
-          <div>
-          <div class="testimonial-name">{{ t.name }}</div>
-          <div class="testimonial-role">{{ t.role }}</div>
-        </div></div>
-      </div>
-      {% endif %}{% endfor %}
-    </div>
-
-    {# Hidden testimonials (shown on click) #}
-    <div class="testimonials-hidden" id="moreTestimonials">
-      {% for t in testimonials %}{% if not t.featured %}
-      <div class="testimonial-card">
-        <div class="testimonial-card-header">
-          <div class="testimonial-quotemarks">&ldquo;</div>
-        </div>
-        <div class="testimonial-headline">"{{ t.headline }}"</div>
-        <div class="testimonial-quote">{{ t.quote }}</div>
-        <div class="testimonial-author-info">
-          <img src="{{ t.photo }}" alt="{{ t.name }}" class="testimonial-avatar">
-          <div>
-          <div class="testimonial-name">{{ t.name }}</div>
-          <div class="testimonial-role">{{ t.role }}</div>
-        </div></div>
-      </div>
-      {% endif %}{% endfor %}
-    </div>
-
-    <div class="testimonials-more">
-      <button class="show-more-btn" id="showMoreBtn">Show All Testimonials</button>
-    </div>
-  </div>
-</section>
 
 <!-- WORK -->
 <section id="work">

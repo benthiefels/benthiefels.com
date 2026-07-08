@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("logos");
   eleventyConfig.addPassthroughCopy("photos");
-  eleventyConfig.addPassthroughCopy("Headshot.jpg");
+  eleventyConfig.addPassthroughCopy("headshot2026.jpg");
   eleventyConfig.addPassthroughCopy("favicon.svg");
   eleventyConfig.addPassthroughCopy("admin");
 
